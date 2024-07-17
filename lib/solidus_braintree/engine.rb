@@ -4,6 +4,10 @@ require 'solidus_core'
 require 'solidus_support'
 
 module SolidusBraintree
+  def self.table_name_prefix
+    'solidus_paypal_braintree_'
+  end
+
   class Engine < Rails::Engine
     include SolidusSupport::EngineExtensions
 
